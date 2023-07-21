@@ -1,0 +1,14 @@
+# 기본 환경(로컬)에서 적용되는 DB 설정
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jpa
+    username: taerin
+    password: '0000'
+  jpa:
+    show-sql: true # 쿼리 보여주는 옵션
+    hibernate:
+      ddl-auto: update # Entity 클래스와 DB 스키마를 비교하여 DB에 생성되지 않은 테이블, 칼럼을 추가하며 제거는 하지 않습니다.
+    properties:
+      hibernate:
+        format_sql: true # 쿼리 포맷팅
